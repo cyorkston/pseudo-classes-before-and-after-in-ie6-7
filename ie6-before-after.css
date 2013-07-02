@@ -1,0 +1,17 @@
+.selector {
+  *zoom: expression(
+    this.runtimeStyle.zoom="1",
+    this.appendChild( document.createElement("small") ).className="after",
+    this.insertBefore( document.createElement("small"), this.firstChild ).className="before"
+    );
+}
+  
+.selector .after, /* IE6/7 */
+.selector:after {
+  /* styling here */
+}
+  
+.selector .before,
+.selector:before {
+  /* styling here */
+}
